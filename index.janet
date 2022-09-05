@@ -3,6 +3,7 @@
 (def- index-path "index.html")
 (def- about-path "about.html")
 (def- logs-path "logs.html")
+# Have very little idea of how this works lol
 (def- log-path (bagatto/%p "logs" '%i :slug '% ".html"))
 
 (def data {:config {:attrs {:title "Andrew's log"
@@ -20,14 +21,14 @@
 (def site {:index {:dest index-path
                    :out (bagatto/renderer "/templates/base")}
            :about {:dest about-path
-                   # TODO: Is there a better way to construct the :_back path?
+                   # TODO: Is there a better way to construct the :path?
                    :out (bagatto/renderer "/templates/about" {:_back {:path (string "./" index-path) :name "index"}})}
            :logs {:dest logs-path
-                  # TODO: Is there a better way to construct the :_back path?
+                  # TODO: Is there a better way to construct the :path?
                   :out (bagatto/renderer "/templates/logs" {:_back {:path (string "./" index-path) :name "index"}})}
            :log {:each :logs
                  :dest log-path
-                 # TODO: Is there a better way to construct the :_back path?
+                 # TODO: Is there a better way to construct the :path?
                  :out (bagatto/renderer "/templates/log" {:_back {:path (string "../" logs-path) :name "logs"}})}
            # TODO: Minify css   
            :css {:each :css
