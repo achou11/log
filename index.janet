@@ -20,14 +20,14 @@
 (def site {:index {:dest index-path
                    :out (bagatto/renderer "/templates/base")}
            :about {:dest about-path
-                   # TODO: Is there a better way to contruct the :_back path?
+                   # TODO: Is there a better way to construct the :_back path?
                    :out (bagatto/renderer "/templates/about" {:_back (string "./" index-path)})}
            :logs {:dest logs-path
-                  # TODO: Is there a better way to contruct the :_back path?
+                  # TODO: Is there a better way to construct the :_back path?
                   :out (bagatto/renderer "/templates/logs" {:_back (string "./" index-path)})}
            :log {:each :logs
                  :dest log-path
-                 # TODO: Is there a better way to contruct the :_back path?
+                 # TODO: Is there a better way to construct the :_back path?
                  :out (bagatto/renderer "/templates/log" {:_back (string "../" logs-path)})}
            # TODO: Minify css   
            :css {:each :css
