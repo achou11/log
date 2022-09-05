@@ -1,0 +1,6 @@
+{% (bagatto/include "/templates/back-button") %}
+
+<div>
+    {% (each log (args :logs) (printf ```<div class="logs-entry"><a href="%s">%s</a></div>``` (log-path args log) (log
+    :title))) %}
+</div>

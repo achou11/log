@@ -1,0 +1,9 @@
+@[{:url "https://github.com/janet-lang/spork.git" :tag "25fa4e3c0c68140f50269d377fbb9f3137efa299" :type :git}
+  {:url "https://github.com/pyrmont/testament" :tag "e404bbb38c82ef88f91c0b259855631365543f7b" :type :git}
+  {:url "https://git.sr.ht/~subsetpark/mago" :tag "51a147f9c667fa4b96c796f83c90b0478466feed" :type :git}
+  {:url "https://github.com/janet-lang/json.git" :tag "7417d506196f28eedd96b4a955684732c70f5d4e" :type :git}
+  {:url "https://github.com/andrewchambers/janet-posix-spawn.git" :tag "d73057161a8d10f27b20e69f0c1e2ceb3e145f97" :type :git}
+  {:url "https://github.com/pyrmont/markable" :tag "0bb2a3d0cb076b31a95431e31c9c384aab84d9d9" :type :git}
+  {:url "https://github.com/andrewchambers/janet-jdn.git" :tag "c0951f6978555268a24d86eee2f118327328b40b" :type :git}
+  {:url "https://github.com/andrewchambers/janet-sh.git" :tag "ec620d5d7310b3682dd0f7bfa86eae6b244d1510" :type :git}
+  {:url "https://git.sr.ht/~subsetpark/bagatto" :tag "742bfbf0003c3f7eb59b1eb595bff6a0bb7212bc" :type :git}]

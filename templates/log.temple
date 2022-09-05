@@ -1,0 +1,7 @@
+{% (bagatto/include "/templates/back-button") %}
+
+<div class="log">
+    <h1 class="log-title">{{ (get-in args [:_item :title]) }}</h1>
+    <p class="log-date">{{ (get-in args [:_item :date]) }}</p>
+    <div class="log-content">{- (bagatto/markdown->html (get-in args [:_item :body])) -}</div>
+</div>

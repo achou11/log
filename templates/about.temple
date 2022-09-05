@@ -1,0 +1,3 @@
+{% (bagatto/include "/templates/back-button") %}
+
+<div>{- (bagatto/markdown->html (get-in args [:about :contents])) -}</div>

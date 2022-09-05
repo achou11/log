@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ (get-in args [:config :title]) }}</title>
+</head>
+
+<h1>My log</h1>
+
+<nav role="navigation">
+    <ul class="nav-list">
+        {% (def nav-item ```<li class="nav-item"><a class="nav-link" href="%s">%s</a></li>```)
+        (each [title url] (get-in args [:config :nav-items])
+        (printf nav-item url title)) %}
+    </ul>
+</nav>
+
+</html>

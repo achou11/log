@@ -1,0 +1,1 @@
+<a href="{{ (get-in args [:_back]) }}">Back</a>
