@@ -21,14 +21,14 @@
                    :out (bagatto/renderer "/templates/base")}
            :about {:dest about-path
                    # TODO: Is there a better way to construct the :_back path?
-                   :out (bagatto/renderer "/templates/about" {:_back (string "./" index-path)})}
+                   :out (bagatto/renderer "/templates/about" {:_back {:path (string "./" index-path) :name "index"}})}
            :logs {:dest logs-path
                   # TODO: Is there a better way to construct the :_back path?
-                  :out (bagatto/renderer "/templates/logs" {:_back (string "./" index-path)})}
+                  :out (bagatto/renderer "/templates/logs" {:_back {:path (string "./" index-path) :name "index"}})}
            :log {:each :logs
                  :dest log-path
                  # TODO: Is there a better way to construct the :_back path?
-                 :out (bagatto/renderer "/templates/log" {:_back (string "../" logs-path)})}
+                 :out (bagatto/renderer "/templates/log" {:_back {:path (string "../" logs-path) :name "logs"}})}
            # TODO: Minify css   
            :css {:each :css
                  :dest (bagatto/path-copier "static")}})
